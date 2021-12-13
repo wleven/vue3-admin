@@ -1,19 +1,16 @@
-import {createRouter, createWebHashHistory, RouteRecordRaw} from "vue-router"
-
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 
 const BaseRoutes: RouteRecordRaw[] = [
-    {
-        path: "/",
-        name: "index",
-        component: () => import("@/layout/index.vue")
-    }
-]
-
+  {
+    path: '/',
+    name: 'index',
+    component: () => import('@/layout/index.vue'),
+  },
+];
 
 const Router = createRouter({
-    history: createWebHashHistory(),
-    routes: BaseRoutes
-})
+  history: createWebHashHistory(),
+  routes: BaseRoutes,
+});
 
-
-export default Router
+export default Router;
