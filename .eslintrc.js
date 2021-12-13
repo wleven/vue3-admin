@@ -19,7 +19,6 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['vue', '@typescript-eslint'],
   rules: {
     'vue/max-attributes-per-line': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
