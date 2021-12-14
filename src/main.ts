@@ -1,10 +1,13 @@
+import './style/tailwind.css';
 import { createApp } from 'vue';
 import App from './App.vue';
 import Router from '@/router';
 
-// import NaiveUI from "@/plugins/NaiveUI";
+// 通用字体
+import 'vfonts/Lato.css';
+// 等宽字体
+import 'vfonts/FiraCode.css';
 
 const app = createApp(App);
 app.use(Router);
-// app.use(NaiveUI)
 app.mount('#app');
