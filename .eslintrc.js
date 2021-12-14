@@ -22,5 +22,6 @@ module.exports = {
   rules: {
     'vue/max-attributes-per-line': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
 };
