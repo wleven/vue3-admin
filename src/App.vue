@@ -1,7 +1,8 @@
 <template>
   <NConfigProvider :theme-overrides="theme">
-    <router-view />
-    <Notify />
+    <Notify>
+      <router-view />
+    </Notify>
   </NConfigProvider>
 </template>
 
