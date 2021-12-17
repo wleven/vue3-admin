@@ -1,5 +1,6 @@
 <template>
   <NMessageProvider>
+    <slot></slot>
     <MessageContent />
   </NMessageProvider>
 </template>
