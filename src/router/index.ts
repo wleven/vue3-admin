@@ -6,6 +6,11 @@ const BaseRoutes: RouteRecordRaw[] = [
     name: 'index',
     component: () => import('@/layout/index.vue'),
   },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/login/index.vue'),
+  },
 ];
 
 const Router = createRouter({
