@@ -19,6 +19,7 @@ export class Request {
     const { RequestTransform, ResponseTransform } = this.getTransform();
 
     // 请求头合并
+    conf.headers = conf.headers || {};
     Object.assign(conf.headers, this.config.headers);
 
     // 请求数据处理
