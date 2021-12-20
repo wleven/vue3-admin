@@ -4,22 +4,17 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    MessageContent: typeof import('./src/components/Notify/MessageContent.vue')['default']
+    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    MessageContent: typeof import('./components/Notify/MessageContent.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
-    NCard: typeof import('naive-ui')['NCard']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
-    NForm: typeof import('naive-ui')['NForm']
-    NFormItem: typeof import('naive-ui')['NFormItem']
-    NIcon: typeof import('naive-ui')['NIcon']
-    NInput: typeof import('naive-ui')['NInput']
     NLayout: typeof import('naive-ui')['NLayout']
     NLayoutContent: typeof import('naive-ui')['NLayoutContent']
     NLayoutFooter: typeof import('naive-ui')['NLayoutFooter']
     NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
     NLayoutSider: typeof import('naive-ui')['NLayoutSider']
     NMessageProvider: typeof import('naive-ui')['NMessageProvider']
-    Notify: typeof import('./src/components/Notify/index.vue')['default']
+    Notify: typeof import('./components/Notify/index.vue')['default']
   }
 }
 
