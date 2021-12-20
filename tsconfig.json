@@ -25,6 +25,7 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "types/**/*.d.ts"
+    "types/**/*.d.ts",
+    "node_modules/@types/**/*.d.ts"
   ]
 }
