@@ -17,13 +17,21 @@ export interface AxiosTransform {
   // 响应数据处理
   ResponseTransform?: AxiosResponseTransformer[];
   // 响应拦截
-  ResponseInterceptors?: (res: AxiosResponse) => Promise<AxiosResponse>;
+  ResponseInterceptors?: (res: AxiosResponse, config: RequestConfig) => Promise<AxiosResponse>;
   // 响应错误
   ResponseInterceptorsError?: (e: AxiosError) => Promise<never>;
 }
 
 export interface CreateAxios extends AxiosRequestConfig {
   transform?: AxiosTransform;
+  requestConfig?: RequestConfig;
+}
+
+export interface RequestConfig {
+  // 是否忽略取消请求 默认不忽略
+  ignoreCancel?: boolean;
+  // 是否返回原生响应数据
+  isReturnNativeResponse?: boolean;
 }
 
 // 接口返回数据类型

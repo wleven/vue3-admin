@@ -8,7 +8,8 @@
     "lint:eslint": "eslint \"src/**/*.{vue,js,ts}\" --fix",
     "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
     "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" ",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@vicons/antd": "^0.11.0",
@@ -20,6 +21,7 @@
     "mockjs": "^1.1.0",
     "naive-ui": "^2.23.1",
     "pinia": "^2.0.6",
+    "qs": "^6.10.2",
     "vfonts": "^0.1.0",
     "vue": "^3.2.26",
     "vue-router": "^4.0.12"
@@ -27,6 +29,7 @@
   "devDependencies": {
     "@types/json-bigint": "^1.0.1",
     "@types/node": "^16.11.14",
+    "@types/qs": "^6.9.7",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
     "@vitejs/plugin-vue": "^2.0.1",

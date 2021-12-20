@@ -21,9 +21,13 @@ const transform: AxiosTransform = {
   ],
 
   // 响应拦截
-  ResponseInterceptors(response) {
+  ResponseInterceptors(response, config) {
     const { data, headers } = response;
-    console.log(response);
+
+    if (config.isReturnNativeResponse) {
+      return Promise.resolve(response);
+    }
+
     if (headers['content-type'] === 'application/json') {
       if (data.code === '00000') {
         return Promise.resolve(response.data);
@@ -32,15 +36,15 @@ const transform: AxiosTransform = {
       window.$message.error(response.data.msg || '未知错误');
       return Promise.reject(response);
     }
+
     return Promise.resolve(response);
   },
 
   // 响应错误
   ResponseInterceptorsError(error) {
-    console.error('ResponseInterceptorsError');
     if (error.response) {
       window.$message.error(error.response.data.msg || '未知错误');
-    } else {
+    } else if (error.message !== 'AxiosCanceler') {
       window.$message.error(error.message);
     }
     return Promise.reject(error);
@@ -51,6 +55,10 @@ const Http = new Request({
   baseURL: import.meta.env.VITE_API as string,
   timeout: 10 * 1000,
   headers: { 'Content-Type': ContentTypeEnum.JSON },
+  requestConfig: {
+    ignoreCancel: false,
+    isReturnNativeResponse: false,
+  },
   transform,
 });
 
