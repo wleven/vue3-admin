@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@types/json-bigint': ^1.0.1
   '@types/node': ^16.11.14
+  '@types/qs': ^6.9.7
   '@typescript-eslint/eslint-plugin': ^5.7.0
   '@typescript-eslint/parser': ^5.7.0
   '@vicons/antd': ^0.11.0
@@ -25,6 +26,7 @@ specifiers:
   pinia: ^2.0.6
   postcss: ^8.4.5
   prettier: ^2.5.1
+  qs: ^6.10.2
   stylelint: ^13.13.1
   stylelint-config-prettier: ^9.0.3
   stylelint-config-standard: ^22.0.0
@@ -49,6 +51,7 @@ dependencies:
   mockjs: registry.npmmirror.com/mockjs/1.1.0
   naive-ui: registry.npmmirror.com/naive-ui/2.23.1_vue@3.2.26
   pinia: registry.npmmirror.com/pinia/2.0.6_typescript@4.5.4+vue@3.2.26
+  qs: registry.npmmirror.com/qs/6.10.2
   vfonts: registry.nlark.com/vfonts/0.1.0
   vue: registry.npmmirror.com/vue/3.2.26
   vue-router: registry.npmmirror.com/vue-router/4.0.12_vue@3.2.26
@@ -56,6 +59,7 @@ dependencies:
 devDependencies:
   '@types/json-bigint': registry.npmmirror.com/@types/json-bigint/1.0.1
   '@types/node': registry.npmmirror.com/@types/node/16.11.14
+  '@types/qs': registry.npmmirror.com/@types/qs/6.9.7
   '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.7.0_a6f6159640504abdd3de077f8bcadb33
   '@typescript-eslint/parser': registry.npmmirror.com/@typescript-eslint/parser/5.7.0_eslint@8.5.0+typescript@4.5.4
   '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/2.0.1_vite@2.7.3+vue@3.2.26
@@ -394,7 +398,6 @@ packages:
     dependencies:
       function-bind: registry.nlark.com/function-bind/1.1.1
       get-intrinsic: registry.nlark.com/get-intrinsic/1.1.1
-    dev: true
 
   registry.nlark.com/callsites/3.1.0:
     resolution: {integrity: sha1-s2MKvYlDQy9Us/BRkjjjPNffL3M=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/callsites/download/callsites-3.1.0.tgz}
@@ -988,7 +991,6 @@ packages:
     resolution: {integrity: sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/function-bind/download/function-bind-1.1.1.tgz}
     name: function-bind
     version: 1.1.1
-    dev: true
 
   registry.nlark.com/functional-red-black-tree/1.0.1:
     resolution: {integrity: sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/functional-red-black-tree/download/functional-red-black-tree-1.0.1.tgz}
@@ -1010,7 +1012,6 @@ packages:
       function-bind: registry.nlark.com/function-bind/1.1.1
       has: registry.nlark.com/has/1.0.3
       has-symbols: registry.nlark.com/has-symbols/1.0.2
-    dev: true
 
   registry.nlark.com/get-stdin/8.0.0:
     resolution: {integrity: sha1-y61qc/63X27rIrqeAfiaooqpelM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/get-stdin/download/get-stdin-8.0.0.tgz}
@@ -1109,7 +1110,6 @@ packages:
     name: has-symbols
     version: 1.0.2
     engines: {node: '>= 0.4'}
-    dev: true
 
   registry.nlark.com/has-tostringtag/1.0.0:
     resolution: {integrity: sha1-fhM4GKfTlHNPlB5zw9P5KR5liyU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/has-tostringtag/download/has-tostringtag-1.0.0.tgz}
@@ -1127,7 +1127,6 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: registry.nlark.com/function-bind/1.1.1
-    dev: true
 
   registry.nlark.com/hash-sum/2.0.0:
     resolution: {integrity: sha1-gdAbtd6OpKIUrV1urRtSNGCwtFo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/hash-sum/download/hash-sum-2.0.0.tgz}
@@ -2249,7 +2248,6 @@ packages:
       call-bind: registry.nlark.com/call-bind/1.0.2
       get-intrinsic: registry.nlark.com/get-intrinsic/1.1.1
       object-inspect: registry.npmmirror.com/object-inspect/1.12.0
-    dev: true
 
   registry.nlark.com/slash/3.0.0:
     resolution: {integrity: sha1-ZTm+hwwWWtvVJAIg2+Nh8bxNRjQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/slash/download/slash-3.0.0.tgz}
@@ -3246,6 +3244,12 @@ packages:
     resolution: {integrity: sha1-L4u0QUNNFjs1+4/9zNcTiSf/uMA=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/parse-json/download/@types/parse-json-4.0.0.tgz}
     name: '@types/parse-json'
     version: 4.0.0
+    dev: true
+
+  registry.npmmirror.com/@types/qs/6.9.7:
+    resolution: {integrity: sha1-Y7t9Bn2xB8weRXwwO8JdUR/r9ss=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/qs/download/@types/qs-6.9.7.tgz}
+    name: '@types/qs'
+    version: 6.9.7
     dev: true
 
   registry.npmmirror.com/@types/resolve/1.17.1:
@@ -4976,7 +4980,6 @@ packages:
     resolution: {integrity: sha512-Ho2z80bVIvJloH+YzRmpZVQe87+qASmBUKZDWgx9cu+KDrX2ZDH/3tMy+gXbZETVGs2M8YdxObOh7XAtim9Y0g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/object-inspect/download/object-inspect-1.12.0.tgz}
     name: object-inspect
     version: 1.12.0
-    dev: true
 
   registry.npmmirror.com/object.values/1.1.5:
     resolution: {integrity: sha1-lZ9j486e8QhyAzMIITHkpFm3Fqw=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/object.values/download/object.values-1.1.5.tgz}
@@ -5205,6 +5208,15 @@ packages:
       void-elements: registry.nlark.com/void-elements/3.1.0
       with: registry.nlark.com/with/7.0.2
     dev: true
+
+  registry.npmmirror.com/qs/6.10.2:
+    resolution: {integrity: sha512-mSIdjzqznWgfd4pMii7sHtaYF8rx8861hBO80SraY5GT0XQibWZWJSid0avzHGkDIZLImux2S5mXO0Hfct2QCw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/qs/download/qs-6.10.2.tgz}
+    name: qs
+    version: 6.10.2
+    engines: {node: '>=0.6'}
+    dependencies:
+      side-channel: registry.nlark.com/side-channel/1.0.4
+    dev: false
 
   registry.npmmirror.com/quick-lru/4.0.1:
     resolution: {integrity: sha1-W4h48ROlgheEjGSCAmxz4bpXcn8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/quick-lru/download/quick-lru-4.0.1.tgz?cache=0&sync_timestamp=1637478782757&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fquick-lru%2Fdownload%2Fquick-lru-4.0.1.tgz}
