@@ -23,7 +23,7 @@ export function initVitePlugins() {
 
   plugins.push(
     AutoImport({
-      imports: ['vue', 'vue-router'],
+      imports: ['vue', 'vue-router', 'pinia'],
       dts: 'src/auto-imports.d.ts',
     })
   );
