@@ -3,17 +3,15 @@
     <Notify>
       <router-view />
     </Notify>
+    <Setting />
   </NConfigProvider>
 </template>
 
 <script lang="ts" setup>
-  import { GlobalThemeOverrides } from 'naive-ui';
   import Notify from '@/components/Notify/index.vue';
+  import Setting from '@/components/Setting/index.vue';
 
-  const theme: GlobalThemeOverrides = {
-    Layout: {
-      // textColor:a.
-      // siderBorderColor: "#000000"
-    },
-  };
+  import Theme from '@/theme';
+
+  const theme = Theme;
 </script>
