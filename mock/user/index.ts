@@ -7,7 +7,7 @@ const api: MockMethod[] = [
     timeout: 1000,
     response: {
       code: '00000',
-      data: { name: '登录成功' },
+      data: { token: '❤❤❤❤❤❤❤❤❤' },
       msg: null,
     },
   },
