@@ -22,7 +22,9 @@
         </NFormItem>
       </NForm>
       <div class="text-center">
-        <NButton class="w-full" type="primary" @click="handleLogin">登录</NButton>
+        <NButton :loading="logInLoading" class="w-full" type="primary" @click="handleLogin"
+          >登录
+        </NButton>
       </div>
     </NCard>
   </div>
@@ -32,14 +34,15 @@
   import { reactive, ref } from 'vue';
   import type { FormInst, FormRules } from 'naive-ui';
   import { LockOutlined, UserOutlined } from '@vicons/antd';
-  import { Login } from '@/api/login';
   import { useRouter } from 'vue-router';
+  import { useUserStore } from '@/store/user';
 
   const formRef = ref<FormInst>();
+  const logInLoading = ref(false);
 
   const formData = reactive({
-    userName: null,
-    passWord: null,
+    userName: '',
+    passWord: '',
   });
 
   const formRule: FormRules = {
@@ -48,13 +51,18 @@
   };
 
   const router = useRouter();
+  const route = useRoute();
+  const userStore = useUserStore();
 
-  function handleLogin() {
-    formRef.value?.validate().then(() => {
-      Login(formData).then(() => {
-        window.$message.success('登录成功');
-        router.replace({ path: '/' });
-      });
+  async function handleLogin() {
+    await formRef.value?.validate();
+
+    logInLoading.value = true;
+    userStore.login(formData).then(() => {
+      window.$message.success('登录成功');
+      logInLoading.value = false;
+      const { redirect = '/' } = route.query;
+      router.replace({ path: redirect as string });
     });
   }
 </script>
