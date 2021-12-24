@@ -1,5 +1,9 @@
-<script lang="ts" setup>
+<script lang="ts">
   import { useMessage } from 'naive-ui';
 
-  window.$message = useMessage();
+  export default defineComponent({
+    setup() {
+      window.$message = useMessage();
+    },
+  });
 </script>
