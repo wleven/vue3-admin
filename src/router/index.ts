@@ -13,6 +13,11 @@ const BaseRoutes: RouteRecordRaw[] = [
     name: 'login',
     component: () => import('@/views/login/index.vue'),
   },
+  {
+    path: '/:path(.*)',
+    name: '404',
+    component: () => import('@/views/error/404.vue'),
+  },
 ];
 
 const Router = createRouter({
