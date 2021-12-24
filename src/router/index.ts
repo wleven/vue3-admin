@@ -1,4 +1,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
+import { CreateRouterGuards } from '@/router/guards';
+import { App } from 'vue';
 
 const BaseRoutes: RouteRecordRaw[] = [
   {
@@ -17,5 +19,10 @@ const Router = createRouter({
   history: createWebHashHistory(),
   routes: BaseRoutes,
 });
+
+export function mountRouter(app: App) {
+  app.use(Router);
+  CreateRouterGuards(Router);
+}
 
 export default Router;
