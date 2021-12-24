@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "preinstall": "npx only-allow pnpm",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vue-tsc --noEmit && vite build",
     "lint:eslint": "eslint \"src/**/*.{vue,js,ts}\" --fix",
     "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
