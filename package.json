@@ -59,6 +59,7 @@
     "unplugin-vue-components": "^0.17.10",
     "vconsole": "^3.10.1",
     "vite": "^2.7.6",
+    "vite-plugin-compression": "^0.4.0",
     "vite-plugin-mock": "^2.9.6",
     "vue-tsc": "^0.3.0"
   }

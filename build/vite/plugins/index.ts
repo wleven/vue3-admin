@@ -6,6 +6,8 @@ import Components from 'unplugin-vue-components/vite';
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
 import AutoImport from 'unplugin-auto-import/vite';
 import { initMockServe } from './mock';
+//gzip
+import viteCompression from 'vite-plugin-compression';
 
 export function initVitePlugins() {
   const plugins: Plugin[] = [];
@@ -29,6 +31,8 @@ export function initVitePlugins() {
   );
 
   plugins.push(initMockServe());
+
+  plugins.push(viteCompression());
 
   return plugins;
 }
