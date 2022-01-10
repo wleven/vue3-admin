@@ -7,6 +7,7 @@ const whiteList = ['/login'];
 
 export function CreateRouterGuards(router: Router) {
   router.beforeEach((to) => {
+    window.$NLoadingBar?.start();
     if (!whiteList.includes(to.path)) {
       // 如果没有登录 跳转到登录页页面
       const userStore = useUserStore();
@@ -30,9 +31,13 @@ export function CreateRouterGuards(router: Router) {
     }
   });
 
+  router.afterEach(() => {
+    window.$NLoadingBar?.finish();
+  });
+
   router.onError((error) => {
-    new Error('路由错误');
-    window.$message?.error('路由错误');
+    window.$NLoadingBar?.error();
+    window.$NMessage?.error('路由错误');
     console.error(error);
   });
 }
