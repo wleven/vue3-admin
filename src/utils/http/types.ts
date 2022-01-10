@@ -35,7 +35,7 @@ export interface RequestConfig {
 }
 
 // 接口返回数据类型
-export interface Result<D = OBJ> {
+export interface Result<D = Record<string, any>> {
   code: string;
   data: D;
   msg: string;
