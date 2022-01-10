@@ -1,17 +1,9 @@
 <template>
-  <NConfigProvider :theme-overrides="theme">
-    <Notify>
-      <router-view />
-    </Notify>
-    <Setting />
-  </NConfigProvider>
+  <AppProvider>
+    <RouterView />
+  </AppProvider>
 </template>
 
 <script lang="ts" setup>
-  import Notify from '@/components/Notify/index.vue';
-  import Setting from '@/components/Setting/index.vue';
-
-  import Theme from '@/theme';
-
-  const theme = Theme;
+  import AppProvider from '@/components/Provider/AppProvider.vue';
 </script>
