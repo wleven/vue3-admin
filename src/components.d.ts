@@ -4,26 +4,24 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AppProvider: typeof import('./components/Provider/AppProvider.vue')['default'];
     HelloWorld: typeof import('./components/HelloWorld.vue')['default'];
-    MessageContent: typeof import('./components/Notify/MessageContent.vue')['default'];
     NButton: typeof import('naive-ui')['NButton'];
-    NCard: typeof import('naive-ui')['NCard'];
     NConfigProvider: typeof import('naive-ui')['NConfigProvider'];
+    NDialogProvider: typeof import('naive-ui')['NDialogProvider'];
     NDrawer: typeof import('naive-ui')['NDrawer'];
     NDrawerContent: typeof import('naive-ui')['NDrawerContent'];
-    NForm: typeof import('naive-ui')['NForm'];
-    NFormItem: typeof import('naive-ui')['NFormItem'];
     NIcon: typeof import('naive-ui')['NIcon'];
-    NInput: typeof import('naive-ui')['NInput'];
     NLayout: typeof import('naive-ui')['NLayout'];
     NLayoutContent: typeof import('naive-ui')['NLayoutContent'];
     NLayoutFooter: typeof import('naive-ui')['NLayoutFooter'];
     NLayoutHeader: typeof import('naive-ui')['NLayoutHeader'];
     NLayoutSider: typeof import('naive-ui')['NLayoutSider'];
+    NLoadingBarProvider: typeof import('naive-ui')['NLoadingBarProvider'];
     NMessageProvider: typeof import('naive-ui')['NMessageProvider'];
-    Notify: typeof import('./components/Notify/index.vue')['default'];
+    NNotificationProvider: typeof import('naive-ui')['NNotificationProvider'];
     NSpace: typeof import('naive-ui')['NSpace'];
-    Setting: typeof import('./components/Setting/index.vue')['default'];
+    Setting: typeof import('./components/Setting/Setting.vue')['default'];
   }
 }
 
