@@ -7,10 +7,14 @@ declare module 'vue' {
     HelloWorld: typeof import('./components/HelloWorld.vue')['default'];
     MessageContent: typeof import('./components/Notify/MessageContent.vue')['default'];
     NButton: typeof import('naive-ui')['NButton'];
+    NCard: typeof import('naive-ui')['NCard'];
     NConfigProvider: typeof import('naive-ui')['NConfigProvider'];
     NDrawer: typeof import('naive-ui')['NDrawer'];
     NDrawerContent: typeof import('naive-ui')['NDrawerContent'];
+    NForm: typeof import('naive-ui')['NForm'];
+    NFormItem: typeof import('naive-ui')['NFormItem'];
     NIcon: typeof import('naive-ui')['NIcon'];
+    NInput: typeof import('naive-ui')['NInput'];
     NLayout: typeof import('naive-ui')['NLayout'];
     NLayoutContent: typeof import('naive-ui')['NLayoutContent'];
     NLayoutFooter: typeof import('naive-ui')['NLayoutFooter'];

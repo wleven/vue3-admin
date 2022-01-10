@@ -1,9 +1,9 @@
 <template>
   <div
-    class="inline-block fixed right-[2rem] bottom-[10rem] bg-primary rounded-[0.8rem] cursor-pointer"
+    class="fixed right-[2rem] bottom-[10rem] bg-primary rounded-[0.8rem] cursor-pointer text-zero"
     @click="handleOpenDrawer"
   >
-    <NIcon class="p-[1rem]" color="white" size="40">
+    <NIcon class="m-[1rem]" color="white" size="40">
       <SettingTwotone />
     </NIcon>
   </div>
