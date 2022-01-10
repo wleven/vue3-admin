@@ -33,7 +33,7 @@ const transform: AxiosTransform = {
         return Promise.resolve(response.data);
       }
 
-      window.$message.error(response.data.msg || '未知错误');
+      window.$NMessage.error(response.data.msg || '未知错误');
       return Promise.reject(response);
     }
 
@@ -43,9 +43,9 @@ const transform: AxiosTransform = {
   // 响应错误
   ResponseInterceptorsError(error) {
     if (error.response) {
-      window.$message.error(error.response.data.msg || '未知错误');
+      window.$NMessage.error(error.response.data.msg || '未知错误');
     } else if (error.message !== 'AxiosCanceler') {
-      window.$message.error(error.message);
+      window.$NMessage.error(error.message);
     }
     return Promise.reject(error);
   },

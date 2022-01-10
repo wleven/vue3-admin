@@ -59,7 +59,7 @@
 
     logInLoading.value = true;
     userStore.login(formData).then(() => {
-      window.$message.success('登录成功');
+      window.$NMessage.success('登录成功');
       logInLoading.value = false;
       const { redirect = '/' } = route.query;
       router.replace({ path: redirect as string });

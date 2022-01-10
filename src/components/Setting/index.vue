@@ -60,30 +60,30 @@
   // 打开/关闭调试
   function handleConsole(value: boolean) {
     settingStore.setConsole(value);
-    window.$message.success(value ? '打开调试成功' : '关闭调试成功');
+    window.$NMessage.success(value ? '打开调试成功' : '关闭调试成功');
   }
 
   // 刷新页面
   function handleRefresh() {
     router.go(0);
-    window.$message.success('刷新成功');
+    window.$NMessage.success('刷新成功');
   }
 
   // 清除本地缓存
   function handleClearLocalStorage() {
     localStorage.clear();
-    window.$message.success('LocalStorage清除成功');
+    window.$NMessage.success('LocalStorage清除成功');
   }
 
   // 清除绘画缓存
   function handleClearSessionStorage() {
     sessionStorage.clear();
-    window.$message.success('SessionStorage清除成功');
+    window.$NMessage.success('SessionStorage清除成功');
   }
 
   // 清除cookie
   function handleClearCookie() {
     clearCookie();
-    window.$message.success('Cookie清除成功');
+    window.$NMessage.success('Cookie清除成功');
   }
 </script>
