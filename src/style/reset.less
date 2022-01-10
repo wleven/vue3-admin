@@ -3,14 +3,53 @@ body {
   font-size: 10px;
   overflow: hidden;
   color: #333;
+  height: 100vh;
+  user-select: none;
+  line-height: 1;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
+pre {
+  font-family: initial;
+}
+
+.h1 {
+  font-size: 3.8rem;
+  font-weight: bold;
+}
+
+.h2 {
+  font-size: 3.4rem;
+  font-weight: bold;
+}
+
+.h3 {
+  font-size: 3rem;
+}
+
+.h4 {
+  font-size: 2.6rem;
+}
+
+.h5 {
+  font-size: 2rem;
+}
+
+#app {
+  position: relative;
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
